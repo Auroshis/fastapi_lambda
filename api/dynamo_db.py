@@ -1,4 +1,3 @@
-from this import d
 import boto3
 from boto3.dynamodb.conditions import Key, Attr
 import os
