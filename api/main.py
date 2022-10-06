@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from  mangum import Mangum
-from dynamo_db import query
-
+from . import dynamo_db
 app = FastAPI()
 
 
@@ -12,7 +11,7 @@ async def root():
 @app.get("/dynamo_query")
 async def query_function(search=None):
     try:
-        return query(search)
+        return dynamo_db.query(search)
     except Exception:
         return "error occured"
 
