@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from  mangum import Mangum
-import dynamo_db
+from mangum import Mangum
+from api import dynamo_db
 from pydantic import BaseModel
 
 app = FastAPI()
