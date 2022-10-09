@@ -3,9 +3,9 @@ from boto3.dynamodb.conditions import Key, Attr
 import os
 
 def get_dyanmodb():
-    dynamodb = boto3.resource('dynamodb', aws_access_key_id=os.getenv('AWS_SECRET_ACCESS_KEY_ID'),
-                                aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY'),
-                                region_name=os.getenv("AWS_DEFAULT_REGION"))
+    dynamodb = boto3.resource('dynamodb', aws_access_key_id=os.getenv('DB_SECRET_ACCESS_KEY_ID'),
+                                aws_secret_access_key=os.getenv('DB_SECRET_ACCESS_KEY'),
+                                region_name=os.getenv("DB_DEFAULT_REGION"))
     return dynamodb
 
 def get_query(value):

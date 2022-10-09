@@ -17,7 +17,7 @@ async def root():
 @app.get("/get_query")
 async def get_query_function(search: str = None):
     try:
-        return dynamo_db.query(search)
+        return dynamo_db.get_query(search)
     except Exception:
         return "error occured"
 
